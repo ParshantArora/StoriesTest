@@ -1,0 +1,19 @@
+export const Logo = require('./Logocopy.jpg');
+export const OnGrid = require('./Icon-OnGrid.png');
+export const OffGrid = require('./Icon-OffGrid.png');
+export const offline = require('./Icon-Offline.png');
+export const LogoMain = require('./Logo.png');
+export const HomeActive = require('./tabs/Home-active.png');
+export const HomeInActive = require('./tabs/Home-Inactive.png');
+export const HelpActive = require('./tabs/Help-active.png');
+export const HelpInactive = require('./tabs/Help-Inactive.png');
+export const SettingActive = require('./tabs/Setting-active.png');
+export const SettingInactive = require('./tabs/Setting-Inactive.png');
+export const InActiveRealTime = require('./tabs/ActivityData(Realtime)-Inactive.png');
+export const ActiveRealTime = require('./tabs/ActivityData(Realtime)-active.png');
+export const ActiveLog = require('./tabs/ActivityData(Log)-active.png');
+export const InActiveLog = require('./tabs/ActivityData(Log)-Inactive.png');
+export const ActiveChangeDeviceParameter = require('./tabs/ChangeDeviceParameter-active.png');
+export const InActiveChangeDeviceParameter = require('./tabs/ChangeDeviceParameter-Inactive.png');
+export const Back = require('./tabs/Back.png');
+
