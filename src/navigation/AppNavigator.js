@@ -76,13 +76,8 @@ function AppNavigator() {
       ...TransitionPresets.SlideFromRightIOS,
     })}
     >
-      {/* {/* <Stack.Screen name="Dashboard" component={TabNavigator}  options={{ title: userName }} */}
-    
-      
        <Stack.Screen name="Dashboard" component={Dashboard2} options={{ title: HackerNewsStories }} />
       <Stack.Screen name="DetailsScreen" component={DetailsScreen} options={{ title: DetailsScreenD }} />
-
-      
 
     </Stack.Navigator>
 

@@ -16,28 +16,13 @@ const ConnectedApp = () => {
   // const appState = useSelector(state => state.appState);
   return (
     <SafeAreaProvider>
-{/* <SafeAreaView style={{ flex:1, backgroundColor: 'black' }}> */}
       <StatusBar backgroundColor='black' barStyle='light-content' />
          <RootNavigator />
-         {/* <Loading loading={appState.loading} />  */}
-      {/* </SafeAreaView> */}
+    
     </SafeAreaProvider>
   );
 }
 
-
-// class ConnectedApp extends Component {
-//   render() {
-//     return (
-//       <SafeAreaProvider>
-//         <SafeAreaView style={{ flex: 1 }}>
-//            <RootNavigator />
-//            {/* <Loading loading={loading} /> */}
-//         </SafeAreaView>
-//       </SafeAreaProvider>
-//     );
-//   }
-// }
 
 const App = () => {
   return (

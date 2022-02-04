@@ -3,7 +3,7 @@
 import React, { Fragment , useState, useEffect } from 'react';
 import { View, Text , FlatList , TouchableOpacity, ScrollView } from 'react-native';
 import { Styles } from './styles';
-import {OffGrid, OnGrid , offline} from '../../../assets';
+
 
 import { Strings } from '../../../constants';
 
@@ -18,10 +18,6 @@ import { WebView } from 'react-native-webview';
 const DetailsScreen = ({ route, navigation })=> {
 
    let { item } = route.params.params;
-
-   console.log("route.paramsroute.params", route.params.params)
-  // return (<></>)
- 
 
 
     return (

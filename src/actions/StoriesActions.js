@@ -7,39 +7,29 @@ import {RootNavigation} from "../config"
 import { handleLoader } from "./appActions";
 import {Toast} from '../components';
 /**
- * Get devices by customer id
+ * Add Stories
  */
 
-export const getDevices = payload => {
+export const getStoriesData = payload => {
     return {
-      type: Types.ADD_DEVICES,
+      type: Types.ADD_STORIES,
       payload,
     };
   };
 
 
 /**
- * Append devices with the old devices list  
+ * Append Stories
  */
 
-export const appendDevices = payload => {
+export const appendStories = payload => {
   return {
-    type: Types.APPEND_DEVICES,
+    type: Types.APPEND_STORIES,
     payload,
   };
 };
 
-/**
- * Append devices with the old devices list  
- */
 
-export const saveClickedDeviceData = payload => {
-  return {
-    type: Types.SAVE_CLICKED_DEVICE_DATA,
-    payload,
-  };
-};
-  
 /**
  * Get particular storie by storie id 
  */
@@ -55,28 +45,6 @@ export const  saveimagestogoogleDriveAndResolvepromiseWhenallDone = (scannedImag
   let url = "item/"+scannedImageDataItem+".json";
   const response = await Request({ path: url, method: 'GET', body: {}, authTokenUse: false });
 
-
-
-  // let avvvvv = await GDrive.files.createFileMultipart(
-  //   scannedImageDataItem,
-  //   "image/jpeg", {
-  //     // parents: ["root"],
-  //     parents: [folderId],
-  //     name: "Opu Health Scan Images "+ moment().format("DD-MMM-YYYY-hh:mm-a").toString() + ".jpg"
-  //   },
-  //   true);
-  // let imagData = await avvvvv.json();
-  // console.log("Opu Health Scan Images ", imagData)
-
-
-  // let imageWebLink = await GDrive.files.get(imagData.id, { fields: 'webViewLink' })
-  // let imageWebLinkdata = await imageWebLink.json();
-  // // if(index == 1){
-  // //   ScannedImage2 = imageWebLinkdata.webViewLink;
-  // // }else{
-  // //   ScannedImage1 = imageWebLinkdata.webViewLink;
-  // // }
-  // console.log(",imageWebLinkdataimageWe,",imageWebLinkdata)
 
   resolve(response);
 
@@ -101,18 +69,14 @@ let promises = [];
 
 
 
-
-
-
-
 /**
- * Get all Stroies
+ * Get all Stroies Action creator
  **/
 
 
 export const getStories = (page , pageSize,append,cb) => async (dispatch, getState) => {
     try {
-      const {user={}} = getState().userState;
+    
 
       dispatch(handleLoader(true));
      
@@ -125,9 +89,9 @@ export const getStories = (page , pageSize,append,cb) => async (dispatch, getSta
   
     
           if(append){
-            dispatch(appendDevices(results));
+            dispatch(appendStories(results));
           }else{
-            dispatch(getDevices(results));
+            dispatch(getStoriesData(results));
           }
 
           dispatch(handleLoader(false));

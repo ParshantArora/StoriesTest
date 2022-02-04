@@ -20,7 +20,7 @@ const Dashboard2 = ({ navigation })=> {
 
 
   const dispatch = useDispatch();
-  const {devices, hasNext , totalPages } = useSelector(({devicesState}) => devicesState);
+  const {storie } = useSelector(({StorieState}) => StorieState);
    
   
   useEffect(() => {
@@ -33,13 +33,9 @@ const Dashboard2 = ({ navigation })=> {
        
     dispatch(getStories(page , pageSize,append,()=>{
      
-      if(refreshData){
-        setRefresh(false)
-        setPage(1)
-      }else{
-        setPage(page+1)
-      }
 
+        setRefresh(false)
+    
     }));
   }
 
@@ -69,7 +65,7 @@ const Dashboard2 = ({ navigation })=> {
     return (
       <View style={Styles.container}>
        {<FlatList
-            data={devices}
+            data={storie}
             showsVerticalScrollIndicator={false}
       
             renderItem={renderItem}
